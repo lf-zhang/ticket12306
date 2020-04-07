@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-band="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:v-band="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8">
 	<title>首页</title>
 	<link rel="stylesheet" href="../../../Common/commonGeneral.css">
 	<link rel="stylesheet" href="../../../Common/commonTop.css">
 	<link rel="stylesheet" href="../../../Common/commonBottom.css">
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="../../../css/index.css"> <!-- /css/index.css  这两种写法都可-->
+<!--	<link rel="stylesheet" th:href="@{/css/index.css}">-->
 	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1344458_mkhjlnf7wn.css">
+
 
 
 </head>
@@ -23,7 +25,7 @@
 				<div class="trainbg">
 					<ul class="mine">
 						<li>
-							<a href="http://localhost:8080/html/own/own_index.html">我的12306<i class="iconfont icon-arrowdropdown"></i></a>
+							<a href="http://localhost:9080/html/own/own_index.html">我的12306<i class="iconfont icon-arrowdropdown"></i></a>
 							<div class="horn"></div>
 							<ul class="mymenu">
 								<li>火车票订单</li>
@@ -41,8 +43,8 @@
 						</li>
 						<li id="insurance_right" href="">您好,{{ users_name }}</li>
 						<li><a href="#"></a></li>
-						<li><a href="http://localhost:8080/html/login.html">登录</a></li>
-						<li><a href="http://localhost:8080/html/register.html">注册</a></li>
+						<li><a href="http://localhost:9080/html/login.html">登录</a></li>
+						<li><a href="http://localhost:9080/html/register.html">注册</a></li>
 						<li><a href="#">退出</a></li>
 					</ul>
 					<ul class="search">
@@ -234,6 +236,7 @@
 	<div class="banner">
 		<!-- 轮播图 -->
 		<div class="picBox">
+			<!--images/Railway12306banner1.jpg 和  ./images/Railway12306banner1.jpg 这三种写法都可-->
 			<img src="images/Railway12306banner1.jpg" alt="抱歉，图片走丢了......">
 			<img src="images/Railway12306banner2.jpg" alt="抱歉，图片走丢了......">
 			<img src="images/Railway12306banner1.jpg" alt="抱歉，图片走丢了......">
@@ -252,7 +255,7 @@
 					<li><a href="#"><i class="iconfont icon-singlecycle-player">连续换乘</i></a></li>
 					<li><a href="#"><i class="iconfont icon-piao">退改签</i></a></li>
 				</ul>
-				<form action="http://localhost:8080/html/search.html" method="GET" style="display: block" id="aaa">
+				<form action="http://localhost:9080/html/search.html" method="GET" style="display: block" id="aaa">
 					出发地&nbsp;&nbsp;<div class="info" ><input type="text" name="startPoint" placeholder="简拼/全拼/汉字" v-model="issue_content" v-on:input ="inputFunc" list="citilist"  >
 					<i class="iconfont icon-font-publish--"></i>
 					<datalist class="serch_result" v-show="serch_result_issue" id="citilist">
@@ -734,7 +737,7 @@
 
 		})
 		$.ajax({
-			url: "http://localhost:8080/api/city/getAllcity",
+			url: "http://localhost:9080/api/city/getAllcity",
 			type: "post",
 			dataType: "json",
 			success: function (data) {
@@ -804,7 +807,7 @@
 				// 	citysolr.id="2";
 				// 	citysolr.name=addresssolr;
 				// 	//发送 post 请求
-				// 	axios.post('http://localhost:8080/search',citysolr,{
+				// 	axios.post('http://localhost:9080/search',citysolr,{
 				// 		transformRequest:[
 				// 			function(data){
 				// 				alert(data[0].name)
@@ -840,7 +843,7 @@
 			var citysolr_name=$("input[id='selectarticl']").val();
 			citysolr.name=citysolr_name;
 			$.ajax({
-				url: "http://localhost:8080/search",
+				url: "http://localhost:9080/search",
 				type: "post",
 				dataType: "json",
 				contentType:"application/json;charset=UTF-8",

@@ -25,7 +25,7 @@
 				<div class="trainbg">
 					<ul class="mine">
 						<li>
-							<a href="http://localhost:8080/html/own/own_index.html">我的12306<i class="iconfont icon-arrowdropdown"></i></a>
+							<a href="http://localhost:9080/html/own/own_index.html">我的12306<i class="iconfont icon-arrowdropdown"></i></a>
 							<div class="horn"></div>
 							<ul class="mymenu">
 								<li>火车票订单</li>
@@ -57,7 +57,7 @@
 	<div class="navigation">
 		<div class="wrapper">
 			<ul>
-				<li style="background-color:#3b99fc;"><a href="../Index/index.html">首页</a></li>
+				<li style="background-color:#3b99fc;"><a href="/html/12306/Index/index.html">首页</a></li>
 				<li>
 					车票<i class="iconfont icon-xiala-copy"></i>
 					<table>
@@ -417,7 +417,7 @@
                         </div>
                     </div>
 					<div class="lay-btn" id="confirmDiv" style="padding: 10px 0px;">
-						<a id="back_edit_id" href="http://localhost:8080/html/search.html" class="btn92" shape="rect">返回</a>
+						<a id="back_edit_id" href="http://localhost:9080/html/search.html" class="btn92" shape="rect">返回</a>
 						<a class="btn92s" id="qr_submit_id" shape="rect">确认</a>
 					</div>
                 </div>
@@ -480,7 +480,7 @@
 		a.cityid2 = city_tid;
 		a.day1 = startDate;
 		$.ajax({
-			url:"http://localhost:8080/api/train/single",
+			url:"http://localhost:9080/api/train/single",
 			dataType:"json",
 			type:"post",
 			contentType:"application/json;charset=UTF-8",
@@ -513,7 +513,7 @@
 					document.cookie = "cookie_train_price = " + t_price+ "; path=/html/";
 					document.cookie = "cookie_from_cityid = " + city_id1+ "; path=/html/";
 					document.cookie = "cookie_to_cityid = " + city_id2+ "; path=/html/";
-					location.href="http://localhost:8080/html/settlement.html";
+					location.href="http://localhost:9080/html/settlement.html";
 				}
 			}
 		});

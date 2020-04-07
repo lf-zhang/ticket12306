@@ -18,7 +18,7 @@
         $(function () {
             //先获取显示所有用户数据
             $.ajax({
-                url:"http://localhost:8080/backstage/get_AllUser",
+                url:"http://localhost:9080/backstage/get_AllUser",
                 type:"post",
                 dataType:"json",
                 data:{
@@ -36,7 +36,7 @@
                             },   //子栏中的 删除
                             del:function (id) {
                                 $.ajax({
-                                    url:"http://localhost:8080/backstage/del_user",
+                                    url:"http://localhost:9080/backstage/del_user",
                                     type:"post",
                                     dataType:"json",
                                     data:{
@@ -61,7 +61,7 @@
                 //确认修改
                 $("input[name=submit]").click(function () {
                     $.ajax({
-                        url:"http://localhost:8080/backstage/alter_UserInfo",
+                        url:"http://localhost:9080/backstage/alter_UserInfo",
                         type:"post",
                         dataType:"json",
                         data:{
@@ -96,7 +96,7 @@
             $("input[value='确认查找']").click(function () {
                 $("#select").css("display","inline");
                 $.ajax({
-                    url:"http://localhost:8080/backstage/select_contact",
+                    url:"http://localhost:9080/backstage/select_contact",
                     type:"post",
                     dataType:"json",
                     data:{

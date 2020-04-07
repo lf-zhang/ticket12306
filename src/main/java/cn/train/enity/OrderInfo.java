@@ -1,6 +1,7 @@
 package cn.train.enity;
 
 import java.util.List;
+import java.util.Objects;
 
 public class OrderInfo {
     private Integer id;
@@ -95,5 +96,24 @@ public class OrderInfo {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        OrderInfo orderInfo = (OrderInfo) o;
+        return Objects.equals(userid, orderInfo.userid) &&
+                Objects.equals(createdate, orderInfo.createdate) &&
+                Objects.equals(paydate, orderInfo.paydate) &&
+                Objects.equals(price, orderInfo.price) &&
+                Objects.equals(status, orderInfo.status) &&
+                Objects.equals(mark, orderInfo.mark) &&
+                Objects.equals(tickets, orderInfo.tickets);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userid, createdate, paydate, price, status, mark, tickets);
     }
 }

@@ -2,6 +2,7 @@ package cn.train.service;
 
 import cn.train.enity.CityInfo;
 import cn.train.mapper.CityInfoMapper;
+import cn.train.service.implement.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

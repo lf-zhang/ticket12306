@@ -25,7 +25,7 @@
                 }
             });
             $.ajax({
-                url:"http://localhost:8080/api/city/getAllcity",
+                url:"http://localhost:9080/api/city/getAllcity",
                 type:"post",
                 dataType:"json",
                 success:function (city) {
@@ -33,7 +33,7 @@
                 }
             });
             $.ajax({
-                url:"http://localhost:8080/backstage/get_trainmodel",
+                url:"http://localhost:9080/backstage/get_trainmodel",
                 type:"post",
                 dataType:"json",
                 success:function (train) {
@@ -45,7 +45,7 @@
             })
             $(".submit").click(function () {
                 $.ajax({
-                    url:"http://localhost:8080/backstage/add_trainInfo",
+                    url:"http://localhost:9080/backstage/add_trainInfo",
                     type:"post",
                     dataType:"json",
                     data:{
@@ -70,7 +70,7 @@
             })
             $("input[value='确认添加列车']").click(function () {
                 $.ajax({
-                    url:"http://localhost:8080/backstage/add_trainmodel",
+                    url:"http://localhost:9080/backstage/add_trainmodel",
                     type:"post",
                     dataType:"json",
                     data:{
@@ -91,7 +91,7 @@
             $("input[value=确认生成车票]").click(function () {
                 alert($("#day").val())
                 $.ajax({
-                    url:"http://localhost:8080/api/train/generateDateTrain",
+                    url:"http://localhost:9080/api/train/generateDateTrain",
                     typt:"post",
                     dataType:"json",
                     data:{

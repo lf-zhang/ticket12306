@@ -5,6 +5,7 @@ import cn.train.enity.SoldTicket;
 import cn.train.enity.StopInfo;
 import cn.train.enity.TrainInfo;
 import cn.train.mapper.*;
+import cn.train.service.implement.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

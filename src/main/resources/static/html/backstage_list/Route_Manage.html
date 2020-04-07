@@ -27,7 +27,7 @@
                     },
                     delete_:function (index_id) {
                         $.ajax({
-                            url:"http://localhost:8080/backstage/del_mapInfo",
+                            url:"http://localhost:9080/backstage/del_mapInfo",
                             type:"post",
                             dataType:"json",
                             data:{
@@ -45,7 +45,7 @@
                 }
             })
             $.ajax({
-                url:"http://localhost:8080/backstage/get_mapcity",
+                url:"http://localhost:9080/backstage/get_mapcity",
                 type:"post",
                 dataType:"json",
                 success:function (mapcitylist) {
@@ -53,7 +53,7 @@
                 }
             }),
                 $.ajax({
-                    url:"http://localhost:8080/backstage/get_mapcity",
+                    url:"http://localhost:9080/backstage/get_mapcity",
                     type:"post",
                     dataType:"json",
                     success:function (citylist) {
@@ -123,7 +123,7 @@
         $(".submit").click(function () {
             alert("确认修改")
             $.ajax({
-                url:"http://localhost:8080/backstage/del_mapInfo",
+                url:"http://localhost:9080/backstage/del_mapInfo",
                 type:'post',
                 dataType:"json",
                 data:{

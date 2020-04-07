@@ -32,7 +32,7 @@
                     //删除
                     delet : function (index) {
                         $.ajax({
-                            url: "http://localhost:8080/backstage/del_trainInfo",
+                            url: "http://localhost:9080/backstage/del_trainInfo",
                             type: "post",
                             dataType: "json",
                             data:{
@@ -53,7 +53,7 @@
                         getInfo.init = traininfo.train[index];
                         //获取城市列表
                         $.ajax({
-                            url: "http://localhost:8080/api/city/getAllcity",
+                            url: "http://localhost:9080/api/city/getAllcity",
                             type: "post",
                             dataType: "json",
                             success: function (city) {
@@ -62,7 +62,7 @@
                         }),
                             //获取火车列表
                         $.ajax({
-                                url: "http://localhost:8080/backstage/get_trainmodel",
+                                url: "http://localhost:9080/backstage/get_trainmodel",
                                 type: "post",
                                 dataType: "json",
                                 success: function (data) {
@@ -75,7 +75,7 @@
             });
             //请求获取所有车次信息数据
             $.ajax({
-                url: "http://localhost:8080/backstage/get_trainInfo",
+                url: "http://localhost:9080/backstage/get_trainInfo",
                 type: 'post',
                 dataType: "json",
                 success: function (list) {
@@ -86,7 +86,7 @@
             //按下 确认修改
             $(".submit").click(function () {
                 $.ajax({
-                    url: "http://localhost:8080/backstage/alter_trainInfo",
+                    url: "http://localhost:9080/backstage/alter_trainInfo",
                     type: "post",
                     dataType: "json",
                     data: {

@@ -1,4 +1,4 @@
-package cn.train.service;
+package cn.train.service.implement;
 
 import cn.train.enity.CityInfo;
 import org.springframework.stereotype.Service;

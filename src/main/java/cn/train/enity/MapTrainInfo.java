@@ -1,5 +1,7 @@
 package cn.train.enity;
 
+import java.util.Objects;
+
 public class MapTrainInfo {
     private Integer id;
 
@@ -104,5 +106,25 @@ public class MapTrainInfo {
 
     public void setStopnumber(Integer stopnumber) {
         this.stopnumber = stopnumber;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MapTrainInfo that = (MapTrainInfo) o;
+        return Objects.equals(number, that.number) &&
+                Objects.equals(modelid, that.modelid) &&
+                Objects.equals(trainModel, that.trainModel) &&
+                Objects.equals(firststation, that.firststation) &&
+                Objects.equals(firstcity, that.firstcity) &&
+                Objects.equals(lastcity, that.lastcity) &&
+                Objects.equals(laststation, that.laststation) &&
+                Objects.equals(stopnumber, that.stopnumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number, modelid, trainModel, firststation, firstcity, lastcity, laststation, stopnumber);
     }
 }

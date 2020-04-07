@@ -137,7 +137,7 @@
         var j = new Object();
         j.id = userid;
         $.ajax({
-            url: "http://localhost:8080/api/user/getInfo",
+            url: "http://localhost:9080/api/user/getInfo",
             type: "post",
             dataType: "json",
             contentType: 'application/json;charset=UTF-8',
@@ -171,7 +171,7 @@
             k.phone = $(".new_phone").val();
             k.status = 0;
             $.ajax({
-                url: "http://localhost:8080/api/user/changePhone",
+                url: "http://localhost:9080/api/user/changePhone",
                 type: "post",
                 dataType: "json",
                 contentType: "application/json;charset=UTF-8",
@@ -189,7 +189,7 @@
                     //         l.phone = $(".new_phone").val();
                     //         l.status = 1;
                     //         $.ajax({
-                    //             url: "http://localhost:8080/api/user/changePhone",
+                    //             url: "http://localhost:9080/api/user/changePhone",
                     //             type: "post",
                     //             dataType: "json",
                     //             contentType: "application/json;charset=UTF-8",
@@ -219,7 +219,7 @@
                 l.phone = $(".new_phone").val();
                 l.status = 1;
                 $.ajax({
-                    url: "http://localhost:8080/api/user/changePhone",
+                    url: "http://localhost:9080/api/user/changePhone",
                     type: "post",
                     dataType: "json",
                     contentType: "application/json;charset=UTF-8",

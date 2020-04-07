@@ -6,7 +6,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration;
 
-
 @SpringBootApplication(exclude = SolrAutoConfiguration.class)
 @MapperScan("cn.train.mapper")
 public class TestApplication {

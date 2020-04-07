@@ -23,7 +23,7 @@
                 methods:{
                     delete_:function (id) {
                         $.ajax({
-                            url:"http://localhost:8080/backstage/del_running",
+                            url:"http://localhost:9080/backstage/del_running",
                             type:'post',
                             dataType:"json",
                             data:{
@@ -45,7 +45,7 @@
                 }
             });
             $.ajax({
-                url:"http://localhost:8080/api/train/getAllTrainInfo",
+                url:"http://localhost:9080/api/train/getAllTrainInfo",
                 type:'post',
                 dataType:"json",
                 success:function (runlist) {
@@ -53,7 +53,7 @@
                 }
             });
             $.ajax({
-                url:"http://localhost:8080/backstage/get_mapstopInfo",
+                url:"http://localhost:9080/backstage/get_mapstopInfo",
                 type:'post',
                 dataType:"json",
                 success:function (mapstoplist) {

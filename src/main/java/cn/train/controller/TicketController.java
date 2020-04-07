@@ -4,31 +4,31 @@ import cn.train.config.Redis;
 import cn.train.enity.OrderInfo;
 import cn.train.enity.Search;
 import cn.train.enity.SoldTicket;
-import cn.train.service.TicketService;
+import cn.train.service.implement.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class TicketController   {
+public class TicketController {
 
-   public  static SoldTicket soldTicket;
-   public static  String id="1";
+    public static SoldTicket soldTicket;
+    public static String id = "1";
     @Autowired
     TicketService ticketService;
 
-      public void send( SoldTicket soldTicket){
-        Redis.publishMessage(soldTicket.getId(),soldTicket);
+    public void send(SoldTicket soldTicket) {
+        Redis.publishMessage(soldTicket.getId(), soldTicket);
     }
 
     @RequestMapping("/api/ticket/getUnsoldTicketNum")
-    public int[] getUnsoldTicketNum(@RequestBody Search search){
+    public int[] getUnsoldTicketNum(@RequestBody Search search) {
         return ticketService.getUnsoldTicketNum(search);
     }
 
     @RequestMapping("/api/ticket/submitTicket")
-    public  OrderInfo submitTicket(@RequestBody SoldTicket soldTicket){
+    public OrderInfo submitTicket(@RequestBody SoldTicket soldTicket) {
 
         send(soldTicket);
         System.out.println("车票提交请求：" + soldTicket);

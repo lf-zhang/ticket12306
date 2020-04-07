@@ -61,7 +61,7 @@
                     a.email = $("#mailnum").val();
                     a.password = $("#passnum").val();
                     $.ajax({
-                        url:"http://localhost:8080/api/user/activation",
+                        url:"http://localhost:9080/api/user/activation",
                         dataType:"json",
                         type:"post",
                         contentType:"application/json;charset=UTF-8",
@@ -69,9 +69,9 @@
                         success:function (data) {
                             if (data==-1){
                                 alert("账户已激活");
-                                location.href="http://localhost:8080/html/login.html";
+                                location.href="http://localhost:9080/html/login.html";
                             }else if(data==1){
-                                location.href="http://localhost:8080/html/login.html";
+                                location.href="http://localhost:9080/html/login.html";
                             } else{
                                 alert("账户不存在");
                             }
@@ -126,7 +126,7 @@
     </div>
     <div class="login-box">
         <ul class="login-hd">
-            <li class="login-hd-code"><a id="positive" href="http://localhost:8080/html/login.html">扫码登录</a></li>
+            <li class="login-hd-code"><a id="positive" href="http://localhost:9080/html/login.html">扫码登录</a></li>
             <li class="login-hd-account"><a id="active" href="javascript:;">邮箱激活</a></li>
         </ul>
         <!-- 账号登录 -->

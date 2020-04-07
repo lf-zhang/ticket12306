@@ -69,7 +69,7 @@
 	<div class="navigation">
 		<div class="wrapper">
 			<ul>
-				<li style="background-color: #3b99fc"><a href="../Index/index.html">首页</a></li>
+				<li style="background-color: #3b99fc"><a href="/html/12306/Index/index.html">首页</a></li>
 				<li>
 					车票<i class="iconfont icon-xiala-copy"></i>
 					<table>
@@ -782,7 +782,7 @@
                 a.sex = $("#sex").val();
                 a.status ="0";
                 $.ajax({
-                    url: "http://localhost:8080/api/user/register",
+                    url: "http://localhost:9080/api/user/register",
                     dataType: "json",
                     type: "post",
                     contentType: "application/json;charset=UTF-8",
@@ -793,7 +793,7 @@
 						}else if (data==-2) {
 							alert("注册失败")
 						} else{
-							location.href="http://localhost:8080/html/mailboxvalidation.html";
+							location.href="http://localhost:9080/html/mailboxvalidation.html";
 						};
                     }, error: function (error) {
                         alert('提交错误');

@@ -1,4 +1,4 @@
-package cn.train.service;
+package cn.train.service.implement;
 
 import org.springframework.stereotype.Service;
 

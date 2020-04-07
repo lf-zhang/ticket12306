@@ -1,5 +1,7 @@
 package cn.train.enity;
 
+import java.util.Objects;
+
 public class UnsoldTicket {
     private Integer id;
 
@@ -161,5 +163,28 @@ public class UnsoldTicket {
 
     public void setSeatlevel(Integer seatlevel) {
         this.seatlevel = seatlevel;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UnsoldTicket that = (UnsoldTicket) o;
+        return Objects.equals(trainid, that.trainid) &&
+                Objects.equals(trainInfo, that.trainInfo) &&
+                Objects.equals(fromstopid, that.fromstopid) &&
+                Objects.equals(fromstop, that.fromstop) &&
+                Objects.equals(tostop, that.tostop) &&
+                Objects.equals(tostopid, that.tostopid) &&
+                Objects.equals(price, that.price) &&
+                Objects.equals(seatnumber, that.seatnumber) &&
+                Objects.equals(rownumber, that.rownumber) &&
+                Objects.equals(carnumber, that.carnumber) &&
+                Objects.equals(seatlevel, that.seatlevel);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(trainid, trainInfo, fromstopid, fromstop, tostop, tostopid, price, seatnumber, rownumber, carnumber, seatlevel);
     }
 }

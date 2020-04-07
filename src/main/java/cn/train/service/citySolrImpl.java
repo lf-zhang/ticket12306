@@ -1,19 +1,15 @@
 package cn.train.service;
 
 import cn.train.enity.articles;
+import cn.train.service.implement.citySolr;
 import org.apache.solr.client.solrj.SolrQuery;
-import org.apache.solr.client.solrj.SolrServerException;
-import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.SolrDocumentList;
 import org.apache.solr.common.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 import javax.annotation.Resource;
-import java.io.IOException;
 import java.util.List;
 @Resource
 @Service

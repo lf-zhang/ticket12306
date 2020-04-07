@@ -10,6 +10,8 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 @Component
 public  class Redis extends Thread{
@@ -54,8 +56,17 @@ public  class Redis extends Thread{
                     System.out.println("目前处于执行状态");
                     TicketController.soldTicket = soldTicket;
                     System.out.println("message: " + soldTicket);
+
+
                 }
             }
         }
 
+    Double test(){
+        ArrayList<Integer> res=new ArrayList<>();
+        res.add(1);
+        double a=(double)res.get(0);
+        double b=2;
+        return ((a + b) / 2);
+    }
 }

@@ -24,7 +24,7 @@
                 }
             });
                 $.ajax({
-                url:"http://localhost:8080/backstage/get_pageN_unsold",
+                url:"http://localhost:9080/backstage/get_pageN_unsold",
                 type: "post",
                 dataType: "json",
                 success:function (number) {
@@ -32,7 +32,7 @@
                 }
             });
             $.ajax({
-                url:"http://localhost:8080/backstage/get_unsoldticket",
+                url:"http://localhost:9080/backstage/get_unsoldticket",
                 type:"post",
                 dataType:"json",
                 data:{
@@ -67,7 +67,7 @@
             })
             function getpage_Info() {
                 $.ajax({
-                    url: "http://localhost:8080/backstage/get_unsoldticket",
+                    url: "http://localhost:9080/backstage/get_unsoldticket",
                     type: "post",
                     dataType: "json",
                     data: {

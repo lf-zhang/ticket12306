@@ -1,5 +1,7 @@
 package cn.train.enity;
 
+import java.util.Objects;
+
 public class CityInfo {
     private Integer id;
 
@@ -49,5 +51,20 @@ public class CityInfo {
                 ", saletime='" + saletime + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CityInfo cityInfo = (CityInfo) o;
+        return Objects.equals(name, cityInfo.name) &&
+                Objects.equals(saletime, cityInfo.saletime) &&
+                Objects.equals(address, cityInfo.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, saletime, address);
     }
 }

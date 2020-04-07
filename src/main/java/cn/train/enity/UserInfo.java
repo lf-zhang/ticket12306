@@ -1,5 +1,7 @@
 package cn.train.enity;
 
+import java.util.Objects;
+
 public class UserInfo {
     private Integer id;
 
@@ -126,5 +128,27 @@ public class UserInfo {
 
     public void setDiscountnumber(String discountnumber) {
         this.discountnumber = discountnumber == null ? null : discountnumber.trim();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UserInfo userInfo = (UserInfo) o;
+        return Objects.equals(username, userInfo.username) &&
+                Objects.equals(name, userInfo.name) &&
+                Objects.equals(password, userInfo.password) &&
+                Objects.equals(idnumber, userInfo.idnumber) &&
+                Objects.equals(email, userInfo.email) &&
+                Objects.equals(phone, userInfo.phone) &&
+                Objects.equals(traveltype, userInfo.traveltype) &&
+                Objects.equals(sex, userInfo.sex) &&
+                Objects.equals(discountnumber, userInfo.discountnumber) &&
+                Objects.equals(status, userInfo.status);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username, name, password, idnumber, email, phone, traveltype, sex, discountnumber, status);
     }
 }

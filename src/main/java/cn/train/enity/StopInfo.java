@@ -1,5 +1,7 @@
 package cn.train.enity;
 
+import java.util.Objects;
+
 public class StopInfo {
     private Integer id;
 
@@ -113,5 +115,26 @@ public class StopInfo {
 
     public void setTicketgate(String ticketgate) {
         this.ticketgate = ticketgate == null ? null : ticketgate.trim();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        StopInfo stopInfo = (StopInfo) o;
+        return Objects.equals(trainid, stopInfo.trainid) &&
+                Objects.equals(mapTrainInfo, stopInfo.mapTrainInfo) &&
+                Objects.equals(cityid, stopInfo.cityid) &&
+                Objects.equals(cityInfo, stopInfo.cityInfo) &&
+                Objects.equals(arrive, stopInfo.arrive) &&
+                Objects.equals(parktime, stopInfo.parktime) &&
+                Objects.equals(lefts, stopInfo.lefts) &&
+                Objects.equals(number, stopInfo.number) &&
+                Objects.equals(ticketgate, stopInfo.ticketgate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(trainid, mapTrainInfo, cityid, cityInfo, arrive, parktime, lefts, number, ticketgate);
     }
 }

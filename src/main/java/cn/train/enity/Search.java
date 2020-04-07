@@ -1,5 +1,7 @@
 package cn.train.enity;
 
+import java.util.Objects;
+
 public class Search {
 
     private int cityid1;
@@ -61,5 +63,21 @@ public class Search {
 
     public void setDay1(String day1) {
         this.day1 = day1;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Search search = (Search) o;
+        return cityid2 == search.cityid2 &&
+                trainid == search.trainid &&
+                Objects.equals(day1, search.day1) &&
+                Objects.equals(day2, search.day2);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cityid2, day1, day2, trainid);
     }
 }

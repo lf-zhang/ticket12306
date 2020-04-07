@@ -22,7 +22,7 @@
             })
             //获取城市列表
             $.ajax({
-                url:"http://localhost:8080/api/city/getAllcity",
+                url:"http://localhost:9080/api/city/getAllcity",
                 type:"post",
                 dataType:"json",
                 success:function (city) {
@@ -35,7 +35,7 @@
             })
             $("#add_mapcity").click(function () {
                 $.ajax({
-                    url:"http://localhost:8080/backstage/add_mapcity",
+                    url:"http://localhost:9080/backstage/add_mapcity",
                     type:"post",
                     dataType:"json",
                     data:{

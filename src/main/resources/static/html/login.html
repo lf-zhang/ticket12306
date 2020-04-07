@@ -40,7 +40,7 @@
                             <img src="../images/login/code-tips1.png">
                         </div>
                         <div id="p2_scan_word1">打开<span>12306手机APP</span>扫描二维码</div>
-                        <div id="p2_scan_word2"><a href="http://localhost:8080/html/register.html">注册12306账号</a></div>
+                        <div id="p2_scan_word2"><a href="http://localhost:9080/html/register.html">注册12306账号</a></div>
                     </div>
                 </div>
                 <div class="login_scan" id="login_part3">
@@ -191,7 +191,7 @@
             a.name = $("#userName").val();
             a.password = $("#password").val();
             $.ajax({
-                url: "http://localhost:8080/api/user/login",
+                url: "http://localhost:9080/api/user/login",
                 type: "post",
                 dataType: "json",
                 contentType: 'application/json;charset=UTF-8',
@@ -205,7 +205,7 @@
                     if (data.status == 1){
                         document.cookie = "cookie_userid = " + data.id;
                         document.cookie = "cookie_username = " + data.name;
-                        location.href="http://localhost:8080/html/12306/Index/index.html";
+                        location.href="http://localhost:9080/html/12306/Index/index.html";
                     }else {
                         alert("账号未激活，请前往激活后再登录");
                     }

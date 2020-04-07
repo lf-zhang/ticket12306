@@ -1,4 +1,4 @@
-package cn.train.service;
+package cn.train.service.implement;
 
 import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import com.aliyuncs.exceptions.ClientException;

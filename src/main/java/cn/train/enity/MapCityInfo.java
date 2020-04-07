@@ -1,5 +1,7 @@
 package cn.train.enity;
 
+import java.util.Objects;
+
 public class MapCityInfo {
     private Integer id;
 
@@ -67,5 +69,23 @@ public class MapCityInfo {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MapCityInfo that = (MapCityInfo) o;
+        return Objects.equals(cityid1, that.cityid1) &&
+                Objects.equals(cityInfo1, that.cityInfo1) &&
+                Objects.equals(cityid2, that.cityid2) &&
+                Objects.equals(cityInfo2, that.cityInfo2) &&
+                Objects.equals(distance, that.distance) &&
+                Objects.equals(price, that.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cityid1, cityInfo1, cityid2, cityInfo2, distance, price);
     }
 }

@@ -2,10 +2,10 @@ package cn.train.service;
 
 import cn.train.enity.*;
 import cn.train.mapper.*;
+import cn.train.service.implement.TrainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

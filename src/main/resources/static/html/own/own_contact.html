@@ -107,7 +107,7 @@
         var c = new Object();
         c.id = userid;
         $.ajax({
-            url: "http://localhost:8080/api/user/getCotactByUserid",
+            url: "http://localhost:9080/api/user/getCotactByUserid",
             type: "post",
             dataType: "json",
             contentType: 'application/json;charset=UTF-8',
@@ -137,7 +137,7 @@
                         var d = new Object();
                         d.id = this.peopleList[index].id;                //传删除按钮对应行的联系人id
                         $.ajax({
-                            url: "http://localhost:8080/api/user/deleteContactByUserid",
+                            url: "http://localhost:9080/api/user/deleteContactByUserid",
                             type: "post",
                             dataType: "json",
                             contentType: 'application/json;charset=UTF-8',

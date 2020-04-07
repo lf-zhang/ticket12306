@@ -70,7 +70,7 @@
         })
         //获取城市列表
         $.ajax({
-            url:"http://localhost:8080/api/city/getAllcity",
+            url:"http://localhost:9080/api/city/getAllcity",
             type:"post",
             dataType:"json",
             success:function (city) {
@@ -79,7 +79,7 @@
         })
         //获取火车列表
         $.ajax({
-            url: "http://localhost:8080/backstage/get_trainmodel",
+            url: "http://localhost:9080/backstage/get_trainmodel",
             type: "post",
             dataType: "json",
             success: function (data) {
@@ -88,7 +88,7 @@
         });
         //获取车次列表
         $.ajax({
-            url: "http://localhost:8080/backstage/get_maptrain",
+            url: "http://localhost:9080/backstage/get_maptrain",
             type: "post",
             dataType: "json",
             success: function (data) {
@@ -100,7 +100,7 @@
         })
         $("#add_map").click(function () {
             $.ajax({
-                url:"http://localhost:8080/backstage/add_running",
+                url:"http://localhost:9080/backstage/add_running",
                 type:"post",
                 dataType:"json",
                 data:{
@@ -123,7 +123,7 @@
         })
         $("#add_city").click(function () {
            $.ajax({
-                url:"http://localhost:8080/backstage/add_stopcity",
+                url:"http://localhost:9080/backstage/add_stopcity",
                 type:"post",
                 dataType:"json",
                 data:{

@@ -24,7 +24,7 @@
             <div class="trainbg">
                 <ul class="mine">
                     <li>
-                        <a href="http://localhost:8080/html/own/own_index.html">我的12306<i class="iconfont icon-arrowdropdown"></i></a>
+                        <a href="http://localhost:9080/html/own/own_index.html">我的12306<i class="iconfont icon-arrowdropdown"></i></a>
                         <div class="horn"></div>
                         <ul class="mymenu">
                             <li>火车票订单</li>
@@ -56,7 +56,7 @@
 <div class="navigation">
     <div class="wrapper">
         <ul>
-            <li style="background-color:#3b99fc;"><a href="../Index/index.html">首页</a></li>
+            <li style="background-color:#3b99fc;"><a href="/html/12306/Index/index.html">首页</a></li>
             <li style="background-color:#2676e3;">
                 车票<i class="iconfont icon-xiala-copy"></i>
                 <table>
@@ -353,7 +353,7 @@
 
     <!--提交订单-->
     <div class="lay-btn">
-        <a id="preStep_id" class="btn92" href="http://localhost:8080/html/search.html">上一步</a>
+        <a id="preStep_id" class="btn92" href="http://localhost:9080/html/search.html">上一步</a>
         <a id="submitOrder_id" class="btn92s" data-toggle="modal" data-target="">提交订单</a>
     </div>
 
@@ -368,10 +368,10 @@
         </p>
         <p>5.
             购买残疾军人（伤残警察）优待票的，须在购票后、开车前办理换票手续方可进站乘车。换票时，不符合规定的减价优待条件，没有有效"中华人民共和国残疾军人证"或"中华人民共和国伤残人民警察证"的，不予换票，所购车票按规定办理退票手续。</p>
-        <p><strong>6.购买铁路乘意险的注册用户年龄须在18周岁以上，使用非中国居民身份证注册的用户如购买铁路乘意险，须在<a href="http://localhost:8080/html/own/own_index.html" shape="rect">我的12306——个人信息</a>
+        <p><strong>6.购买铁路乘意险的注册用户年龄须在18周岁以上，使用非中国居民身份证注册的用户如购买铁路乘意险，须在<a href="http://localhost:9080/html/own/own_index.html" shape="rect">我的12306——个人信息</a>
             如实填写“出生日期”。</strong>
         </p>
-        <p><strong>7.父母为未成年子女投保，须在<a href="http://localhost:8080/html/own/own_contact.html" shape="rect">我的常用联系人</a>
+        <p><strong>7.父母为未成年子女投保，须在<a href="http://localhost:9080/html/own/own_contact.html" shape="rect">我的常用联系人</a>
             登记未成年子女的有效身份证件信息。</strong>
         </p>
         <p>8.未尽事宜详见《铁路旅客运输规程》等有关规定和车站公告。</p>
@@ -494,7 +494,7 @@
                 </div>
                 <p id="sy_ticket_num_id">欢迎乘坐本次列车，祝您旅途愉快</p>
                 <div class="lay-btn" id="confirmDiv" style="padding: 10px 0px;">
-                    <a id="back_edit_id" href="http://localhost:8080/html/settlement.html" class="btn92" shape="rect">返回修改</a>
+                    <a id="back_edit_id" href="http://localhost:9080/html/settlement.html" class="btn92" shape="rect">返回修改</a>
                     <a href="#" class="btn92s" id="qr_submit_id" shape="rect">确认</a>
                 </div>
             </div>
@@ -599,7 +599,7 @@
         var a = new Object();
         a.id = userid;
         $.ajax({
-            url:"http://localhost:8080/api/user/getInfo",
+            url:"http://localhost:9080/api/user/getInfo",
             dataType:"json",
             type:"post",
             contentType:"application/json;charset=UTF-8",
@@ -643,7 +643,7 @@
         var ao = new Object();
         ao.id = userid;
         $.ajax({
-            url:"http://localhost:8080/api/user/getCotactByUserid",
+            url:"http://localhost:9080/api/user/getCotactByUserid",
             dataType:"json",
             type:"post",
             contentType:"application/json;charset=UTF-8",
@@ -676,7 +676,7 @@
         c.cityid2 = city_id2;
         c.trainid = train_id;
         $.ajax({
-            url:"http://localhost:8080/api/ticket/getUnsoldTicketNum",
+            url:"http://localhost:9080/api/ticket/getUnsoldTicketNum",
             dataType:"json",
             type:"post",
             contentType:"application/json;charset=UTF-8",
@@ -786,7 +786,7 @@
             document.cookie = "cookie_seat_number = " + seatNo+ "; path=/html/";
             document.cookie = "cookie_seat_level = " + seatNumber+ "; path=/html/";
             document.cookie = "cookie_contentid = " + contentId+ "; path=/html/";
-            location.href="http://localhost:8080/html/payOrder.html"
+            location.href="http://localhost:9080/html/payOrder.html"
         })
 
     })
