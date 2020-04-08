@@ -1,14 +1,16 @@
-package cn.train.enity;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
 
-import java.util.Objects;
+package cn.train.enity;
 
 public class TrainModel {
     private Integer id;
-
     private String name;
 
     public Integer getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Integer id) {
@@ -16,23 +18,71 @@ public class TrainModel {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        TrainModel that = (TrainModel) o;
-        return Objects.equals(name, that.name);
+    public TrainModel() {
     }
 
+    public TrainModel(final Integer id, final String name) {
+        this.id = id;
+        this.name = name;
+    }
+    @Override
+    public String toString() {
+        return "TrainModel(id=" + this.getId() + ", name=" + this.getName() + ")";
+    }
+    @Override
+    public boolean equals(final Object o) {
+        if (o == this) {
+            return true;
+        } else if (!(o instanceof TrainModel)) {
+            return false;
+        } else {
+            TrainModel other = (TrainModel)o;
+            if (!other.canEqual(this)) {
+                return false;
+            } else {
+                Object this$id = this.getId();
+                Object other$id = other.getId();
+                if (this$id == null) {
+                    if (other$id != null) {
+                        return false;
+                    }
+                } else if (!this$id.equals(other$id)) {
+                    return false;
+                }
+
+                Object this$name = this.getName();
+                Object other$name = other.getName();
+                if (this$name == null) {
+                    if (other$name != null) {
+                        return false;
+                    }
+                } else if (!this$name.equals(other$name)) {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+    }
+
+    protected boolean canEqual(final Object other) {
+        return other instanceof TrainModel;
+    }
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        int PRIME = 1;
+        int result = 1;
+        Object $id = this.getId();
+         result = result * 59 + ($id == null ? 43 : $id.hashCode());
+        Object $name = this.getName();
+        result = result * 59 + ($name == null ? 43 : $name.hashCode());
+        return result;
     }
 }
